@@ -1,4 +1,4 @@
-    /**
+    /*
      * Problem Hint: Determine if there are any duplicate elements in the array.
      * Solution: We use a HashSet to track the elements we have seen so far.
      *           As we iterate through the array, if we encounter an element
