@@ -1,15 +1,3 @@
-class Solution {
-    public boolean containsDuplicate(int[] nums) {
-        HashSet<Integer> set = new HashSet<>();
-        for(int num : nums){
-            if(set.contains(num)){
-                return true;
-            }
-            set.add(num);
-        } 
-        return false;  
-    }
-}
     /**
      * Problem Hint: Determine if there are any duplicate elements in the array.
      * Solution: We use a HashSet to track the elements we have seen so far.
@@ -22,3 +10,16 @@ class Solution {
      * Space Complexity: O(n) - In the worst case, all elements are unique, so we store
      *                   all n elements in the HashSet.
      */
+     
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        HashSet<Integer> set = new HashSet<>();
+        for(int num : nums){
+            if(set.contains(num)){
+                return true;
+            }
+            set.add(num);
+        } 
+        return false;  
+    }
+}
