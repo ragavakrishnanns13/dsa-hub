@@ -1,27 +1,26 @@
 class Solution {
     /**
      * Problem Hint: Check if two strings `s` and `t` are anagrams of each other. 
-     *               An anagram means both strings contain the same characters with 
-     *               the same frequency.
-     * Solution: Use an integer array of length 26 to count character occurrences 
-     *           for each letter in `s` and decrement for each letter in `t`.
-     *           If `s` and `t` are anagrams, all counts should end up as zero.
+     *               An anagram means both strings contain the same characters 
+     *               with the same frequencies.
+     * Solution: First, check if `s` and `t` have the same length; if not, return false.
+     *           Use an integer array of size 26 to count character frequencies. 
+     *           As we iterate through `s` and `t` simultaneously, increment for each character 
+     *           in `s` and decrement for each character in `t`. If all counts end up as zero, 
+     *           `s` and `t` are anagrams.
      * 
      * Time Complexity: O(n) - We iterate through both strings `s` and `t` once, 
-     *                  where `n` is the maximum length of the two strings.
-     * Space Complexity: O(1) - Since we use a fixed-size array (26) for character 
-     *                   counts, space usage remains constant regardless of input size.
+     *                  where `n` is the length of the strings.
+     * Space Complexity: O(1) - The integer array for character counts has a fixed size of 26.
      */
     public boolean isAnagram(String s, String t) {
+        if (s.length() != t.length()) return false;
+        
         int[] arr = new int[26];
         
-        // Increment count for each character in `s`
+        // Increment for `s` character and decrement for `t` character simultaneously
         for (int i = 0; i < s.length(); i++) {
             arr[s.charAt(i) - 'a']++;
-        }
-        
-        // Decrement count for each character in `t`
-        for (int i = 0; i < t.length(); i++) {
             arr[t.charAt(i) - 'a']--;
         }
         
