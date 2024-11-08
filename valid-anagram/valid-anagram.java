@@ -1,3 +1,4 @@
+class Solution {
     /**
      * Problem Hint: Check if two strings `s` and `t` are anagrams of each other. 
      *               An anagram means both strings contain the same characters with 
@@ -11,8 +12,6 @@
      * Space Complexity: O(1) - Since we use a fixed-size array (26) for character 
      *                   counts, space usage remains constant regardless of input size.
      */
-     
-class Solution {
     public boolean isAnagram(String s, String t) {
         int[] arr = new int[26];
         
