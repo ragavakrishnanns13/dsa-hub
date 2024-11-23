@@ -43,3 +43,18 @@ class Solution {
         return true;
     }
 }
+
+// the below represents the 3x3 blocks as in the formula, i/3 and j/3. 
+// for example, let's take board[4][6] = 4/3 -> 1, 6/3 -> 2, so it represents the block with block[1][2]. 
+// [     0        1        2
+//   [0, 0, 0, 0, 0, 0, 0, 0, 0],  // Row 0
+// 0 [0, 0, 0, 0, 4, 0, 0, 0, 0],  // Row 1
+//   [0, 0, 0, 0, 0, 0, 0, 0, 0],  // Row 2
+//   [0, 0, 0, X, 0, 0, 0, 0, 0],  // Row 3
+// 1 [0, 0, 0, 0, 0, 0, 0, 0, 0],  // Row 4
+//   [0, 0, 0, 0, 0, 0, X, 0, 0],  // Row 5
+//   [0, 0, 0, 0, 0, 0, 0, 0, 0],  // Row 6
+// 2 [0, 0, 0, 0, 0, 0, 0, 0, 0],  // Row 7
+//   [0, 0, 0, 0, 0, 0, 0, 0, X]   // Row 8
+// ]
+
