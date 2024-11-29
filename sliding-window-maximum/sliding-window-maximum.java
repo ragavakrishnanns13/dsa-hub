@@ -5,6 +5,7 @@ public class Solution {
      * 
      * Approach:
      * 1. Use a double-ended queue (`Deque`) to store indices of elements in `nums`.
+          The Deque i.e double ended queue is used as a monotonically decreasing queue (decreasing monotonic queue)
      * 2. Maintain the deque such that:
      *    - The front (`q.getFirst()`) always contains the index of the maximum element in the current window.
      *    - Elements that are smaller than the current number being added (`nums[r]`) are removed from the back.
