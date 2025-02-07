@@ -1,9 +1,9 @@
 class Solution {
     public int minEatingSpeed(int[] piles, int h) {
-        int left = 1, right = 10000000000;
-        // for(int pile : piles){
-        //     right = Math.max(right, pile);
-        // }
+        int left = 1, right = Integer.MIN_VALUE;
+        for(int pile : piles){
+            right = Math.max(right, pile);
+        }
         while (left < right) {
             int mid = left + (right - left) / 2;
             if (f(piles, mid) <= h) {
